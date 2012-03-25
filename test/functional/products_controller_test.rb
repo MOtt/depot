@@ -31,7 +31,7 @@ class ProductsControllerTest < ActionController::TestCase
   end
 
   test "should show product" do
-      put :update, id: @product.to_param, product: @update
+      get :show, id: @product
       assert_response :success
   end
 
