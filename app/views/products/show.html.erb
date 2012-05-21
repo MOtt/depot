@@ -18,7 +18,7 @@
 <p>
   <b>Price:</b>
   <% @product.price.round(2) unless @product.price.nil? %>
-  <%= (20*@product.price).round/20 unless @product.price.nil? %>
+  <%= (20*@product.price).round unless @product.price.nil? %>
 </p>
 
 
