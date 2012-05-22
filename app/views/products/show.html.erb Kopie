@@ -18,6 +18,7 @@
 <p>
   <b>Price:</b>
   <%= number_to_currency(((20*(product.price)).round+0.01)/20) unless @product.price.nil? %>
+  <%= (((20*@product.price).round+0.00)*0.05) unless @product.price.nil? %>
 </p>
 
 
