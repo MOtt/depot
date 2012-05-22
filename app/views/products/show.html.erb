@@ -17,7 +17,7 @@
 
 <p>
   <b>Price:</b>
-  <%= (((20*@product.price).round+0.01)*0.05) unless @product.price.nil? %>
+  <%= ((((20*@product.price).round+0.01)*0.05).round(2) unless @product.price.nil? %>
 </p>
 
 
