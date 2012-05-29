@@ -15,19 +15,19 @@
   </div>
   <div id="columns">
     <div id="side">
-      <div id="cart">
-        <%= render @cart %>
-      </div>
-
-
       <ul>
-        <li><a href="http://www....">Home</a></li>
+        <li><a href="http://mott01.herokuapp.com">Home</a></li>
         <li><a href="http://www..../faq">Questions</a></li>
         <li><a href="http://www..../news">News</a></li>
         <li><a href="http://www..../contact">Contact</a></li>
 <br>
 	     <li>Last Reload: <br> <%= ((Time.now)+2.hours).to_s(:short) %></li>
       </ul>
+
+      <div id="cart">
+        <%= render @cart %>
+      </div>
+
     </div>
     <div id="main">
       <%= yield %>
