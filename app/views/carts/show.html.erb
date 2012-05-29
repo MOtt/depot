@@ -2,6 +2,7 @@
 <p id="notice"><%= notice %></p>
 <% end %>
 
+<% unless cart.line_items.empty? %>
 <div class="cart_title">Your Cart</div>
 <table>
 <!-- START_HIGHLIGHT -->
@@ -17,3 +18,4 @@
 
 <%= button_to 'Empty cart', @cart, method: :delete,
     confirm: 'Are you sure?' %>
+<% end %>
