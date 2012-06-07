@@ -24,9 +24,16 @@
 	     <li>Last Reload: <br> <%= ((Time.now)+2.hours).to_s(:short) %></li>
       </ul>
 
-      <div id="cart">
+      <div id="cart"
+	<% if @cart.line_items.empty? %>
+        style="display: none"
+    	<% end %>
+
+	<%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
         <%= render @cart %>
-      </div>
+      <% end %>
+
+</div>	
 
     </div>
     <div id="main">
